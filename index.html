@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 PDF Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Base64 PDF Viewer</h1>
+        
+        <div class="content-wrapper">
+            <div class="input-column">
+                <div class="input-section">
+                    <h2>Input Base64 Value</h2>
+                    <textarea id="base64Input" placeholder="Paste your base64 encoded PDF data here..."></textarea>
+                    
+                    <div class="buttons">
+                        <button id="viewBtn">View PDF</button>
+                        <button id="clearBtn">Clear</button>
+                        <button id="sampleBtn">Load Sample</button>
+                    </div>
+                    
+                    <div id="errorMsg" class="error-message"></div>
+                </div>
+            </div>
+            
+            <div class="viewer-column">
+                <div class="viewer-section">
+                    <h2>Output PDF</h2>
+                    <div class="pdf-container">
+                        <iframe id="pdfViewer" title="PDF Viewer"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
