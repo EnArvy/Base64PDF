@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base64 PDF Viewer</title>
+    <title>Base64 PDF Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Base64 PDF Viewer</h1>
+        <h1>Base64 PDF Converter</h1>
+        
+        <div class="mode-toggle">
+            <span class="toggle-label">Base64 to PDF</span>
+            <label class="switch">
+                <input type="checkbox" id="converterToggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">PDF to Base64</span>
+        </div>
         
         <div class="content-wrapper">
             <div class="input-column">
-                <div class="input-section">
+                <div class="input-section" id="base64InputSection">
                     <h2>Input Base64 Value</h2>
                     <textarea id="base64Input" placeholder="Paste your base64 encoded PDF data here..."></textarea>
                     
@@ -24,13 +33,33 @@
                     
                     <div id="errorMsg" class="error-message"></div>
                 </div>
+                
+                <div class="input-section" id="pdfInputSection" style="display:none;">
+                    <h2>Input PDF File</h2>
+                    <input type="file" id="pdfFileInput" accept="application/pdf" />
+                    
+                    <div class="buttons">
+                        <button id="convertBtn">Convert to Base64</button>
+                        <button id="clearFileBtn">Clear</button>
+                    </div>
+                    
+                    <div id="pdfErrorMsg" class="error-message"></div>
+                </div>
             </div>
             
             <div class="viewer-column">
-                <div class="viewer-section">
+                <div class="viewer-section" id="pdfViewerSection">
                     <h2>Output PDF</h2>
                     <div class="pdf-container">
                         <iframe id="pdfViewer" title="PDF Viewer"></iframe>
+                    </div>
+                </div>
+                
+                <div class="viewer-section" id="base64OutputSection" style="display:none;">
+                    <h2>Output Base64</h2>
+                    <div class="base64-container">
+                        <textarea id="base64Output" readonly placeholder="Base64 output will appear here..."></textarea>
+                        <button id="copyBtn">Copy to Clipboard</button>
                     </div>
                 </div>
             </div>
