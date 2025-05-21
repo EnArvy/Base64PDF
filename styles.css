@@ -10,17 +10,20 @@ body {
     color: #f5f5f5;
     background-color: #222831;
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 10px;
     background-color: #393e46;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     padding: 20px;
-    height: calc(100vh - 40px);
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -269,4 +272,15 @@ input:checked + .slider:before {
         height: 120px;
         font-size: 12px;
     }
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer .container {
+    padding: 10px;
+    height: auto;
 }

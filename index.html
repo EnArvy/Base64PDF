@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base64 PDF Converter</title>
+    <title>Base64 PDF Converter | Convert PDF to Base64 and Vice Versa</title>
+    <meta name="description" content="Free and privacy focused online tool to convert PDF files to Base64 encoding and decode Base64 strings back to PDF files. No installation required.">
+    <meta name="keywords" content="base64 to pdf, pdf to base64, base64 pdf converter, pdf encoder, pdf decoder, online pdf tools">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Base64 PDF Converter</h1>
-        
-        <div class="mode-toggle">
-            <span class="toggle-label">Base64 to PDF</span>
-            <label class="switch">
-                <input type="checkbox" id="converterToggle">
-                <span class="slider round"></span>
-            </label>
-            <span class="toggle-label">PDF to Base64</span>
+    <header>
+        <div class="container">
+            <h1>Base64 PDF Converter</h1>
+            
+            <div class="mode-toggle">
+                <span class="toggle-label">Base64 to PDF</span>
+                <label class="switch">
+                    <input type="checkbox" id="converterToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">PDF to Base64</span>
+            </div>
         </div>
-        
+    </header>
+    
+    <main class="container">
         <div class="content-wrapper">
             <div class="input-column">
                 <div class="input-section" id="base64InputSection">
@@ -64,8 +70,33 @@
                 </div>
             </div>
         </div>
-    </div>
+        
+        <section class="info-section">
+            <h4>About This Tool</h4>
+            <p id="info-text">This free online tool allows you to easily convert PDF files to Base64 encoding and decode Base64 strings back to viewable PDF files. No registration or software installation required.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Base64 PDF Converter. All rights reserved.</p>
+        </div>
+    </footer>
     
     <script src="script.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Base64 PDF Converter",
+        "description": "Free online tool to convert PDF files to Base64 encoding and decode Base64 strings back to PDF files.",
+        "applicationCategory": "Utility",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
 </body>
 </html>
